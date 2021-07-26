@@ -1,5 +1,6 @@
 public class Produto {
-	String produto, descricao, valor, lucro, estoque;
+	String produto, descricao, valor, lucro;
+	int estoque;
 	
 	public String getProduto() {
 		return produto;
@@ -13,9 +14,10 @@ public class Produto {
 	public String getLucro() {
 		return lucro;
 	}
-	public String getEstoque() {
+	public int getEstoque() {
 		return estoque;
 	}
+	
 	public void setProduto(String produtoAlterado) {
 		this.produto = produtoAlterado;
 	}
@@ -28,7 +30,7 @@ public class Produto {
 	public void setLucro(String lucroAlterado) {
 		this.lucro = lucroAlterado;
 	}
-	public void setEstoque(String estoqueAlterado) {
+	public void setEstoque(int estoqueAlterado) {
 		this.estoque = estoqueAlterado;
 	}
 	

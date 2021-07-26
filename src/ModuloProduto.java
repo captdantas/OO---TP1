@@ -14,7 +14,7 @@ public class ModuloProduto {
 		produto1.setDescricao("por Tati Bernardi");
 		produto1.setValor("42.90");
 		produto1.setLucro("50");
-		produto1.setEstoque("65");
+		produto1.setEstoque(65);
 		dadosDoProduto.add(produto1);
 		
 		Produto produto2 = new Produto();
@@ -22,7 +22,7 @@ public class ModuloProduto {
 		produto2.setDescricao("por Daniel Goleman e Ivo Korytowski");
 		produto2.setValor("44.90");
 		produto2.setLucro("55");
-		produto2.setEstoque("100");
+		produto2.setEstoque(100);
 		dadosDoProduto.add(produto2);
 		
 		Produto produto3 = new Produto();
@@ -30,7 +30,7 @@ public class ModuloProduto {
 		produto3.setDescricao("por Bill Clegg e Julia Romeu");
 		produto3.setValor("54.90");
 		produto3.setLucro("40");
-		produto3.setEstoque("4");
+		produto3.setEstoque(4);
 		dadosDoProduto.add(produto3);
 		
 		Produto produto4 = new Produto();
@@ -38,7 +38,7 @@ public class ModuloProduto {
 		produto4.setDescricao("por Jacopo de Varazze e Hilário Franco Júnior");
 		produto4.setValor("117.90");
 		produto4.setLucro("45");
-		produto4.setEstoque("12");
+		produto4.setEstoque(12);
 		dadosDoProduto.add(produto4);
 		
 		Produto produto5 = new Produto();
@@ -46,7 +46,7 @@ public class ModuloProduto {
 		produto5.setDescricao("por Charles Duhigg e Rafael Mantovani");
 		produto5.setValor("69.90");
 		produto5.setLucro("60");
-		produto5.setEstoque("94");
+		produto5.setEstoque(94);
 		dadosDoProduto.add(produto5);
 		
 		Produto produto6 = new Produto();
@@ -54,7 +54,7 @@ public class ModuloProduto {
 		produto6.setDescricao("por Carol S. Dweck e S. Duarte");
 		produto6.setValor("24.90");
 		produto6.setLucro("50");
-		produto6.setEstoque("91	");
+		produto6.setEstoque(91);
 		dadosDoProduto.add(produto6);
 		
 		Produto produto7 = new Produto();
@@ -62,7 +62,7 @@ public class ModuloProduto {
 		produto7.setDescricao("por Clarissa Pinkola Estés");
 		produto7.setValor("69.90");
 		produto7.setLucro("30");
-		produto7.setEstoque("33");
+		produto7.setEstoque(33);
 		dadosDoProduto.add(produto7);
 		
 		Produto produto8 = new Produto();
@@ -70,7 +70,7 @@ public class ModuloProduto {
 		produto8.setDescricao("por Leonard Mlodinow, Diego Alfaro, e outros.");
 		produto8.setValor("39.90");
 		produto8.setLucro("15");
-		produto8.setEstoque("92");
+		produto8.setEstoque(92);
 		dadosDoProduto.add(produto8);
 		
 		Produto produto9 = new Produto();
@@ -78,7 +78,7 @@ public class ModuloProduto {
 		produto9.setDescricao("por George S Clason");
 		produto9.setValor("29.90");
 		produto9.setLucro("45");
-		produto9.setEstoque("74");
+		produto9.setEstoque(74);
 		dadosDoProduto.add(produto9);
 		
 		Produto produto10 = new Produto();
@@ -86,7 +86,7 @@ public class ModuloProduto {
 		produto10.setDescricao("por C. J. Tudor e Alexandre Raposo");
 		produto10.setValor("49.90");
 		produto10.setLucro("10");
-		produto10.setEstoque("70");
+		produto10.setEstoque(70);
 		dadosDoProduto.add(produto10);
 	}
 
@@ -106,7 +106,7 @@ public class ModuloProduto {
 	    novo.setLucro(ler.nextLine());
 	    
 	    System.out.println("Quantidade em estoque:");  
-	    novo.setEstoque(ler.nextLine());
+	    novo.setEstoque(ler.nextInt());
 	    
 	    dadosDoProduto.add(novo);
 	}

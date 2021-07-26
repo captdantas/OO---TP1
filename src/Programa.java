@@ -4,7 +4,7 @@ class Programa {
 	public static void main(String[] args) {
 		int acaoMenu, aux=0, acao, qntdVendas; 
 		int qntdClientes;
-		int qntdProdutos;
+		int qntdProdutos, alterarEstoque;
 		String alterar;
 		Scanner ler = new Scanner(System.in);
 		ModuloCliente dadosCliente = new ModuloCliente();
@@ -31,6 +31,7 @@ class Programa {
 				dadosCliente.cadastrarCliente();
 				aux++;
 			}
+			aux = 0;
 			System.out.println("Clientes cadastrados com sucesso!");
 			break;
 			
@@ -41,44 +42,47 @@ class Programa {
 						+ "Endereco: " + buscaCliente.getEndereco() + "\n"
 								+ "Teleone: " + buscaCliente.getTelefone()+ "\n"); //mostra os dados dos cliente
 				System.out.println("Deseja alterar os dados do cliente?\n"
-						+ "1-Sim\n"
-						+ "2-Não\n");
+						+ "0-Sim\n"
+						+ "1-Não\n");
 				acao = ler.nextInt();
 				//para alterar dados do cliente
-				if(acao==1) {
+				if(acao==0) {
 					acao = 0;
 					//para alterar o nome
 					System.out.println("Deseja alterar o nome?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual nome deseja colocar?\n");
-						alterar = ler.next();
+						ler.nextLine();
+						alterar = ler.nextLine();
 						buscaCliente.setNome(alterar);
 						acao = 0;
 						alterar = null;
 					}
 					//para alterar o endereço
 					System.out.println("Deseja alterar o endereço?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual endereço deseja colocar?\n");
-						alterar = ler.next();
+						ler.nextLine();
+						alterar = ler.nextLine();
 						buscaCliente.setEndereco(alterar);
 						acao = 0;
 						alterar = null;
 					}
 					//para alterar o telefone
 					System.out.println("Deseja alterar o telefone?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual telefone deseja colocar?\n");
-						alterar = ler.next();
+						ler.nextLine();
+						alterar = ler.nextLine();
 						buscaCliente.setTelefone(alterar);
 						acao = 0;
 						alterar = null;
@@ -101,6 +105,7 @@ class Programa {
 				aux++;
 			}
 			System.out.println("Produtos cadastrados com sucesso!");
+			aux = 0;
 			break;
 			
 		case 4:
@@ -113,71 +118,74 @@ class Programa {
 												+ "Quantidade em estoque: " + buscaProduto.getEstoque() + "\n");
 				//para alterar os dados do produto
 				System.out.println("Deseja alterar os dados do produto?\n"
-						+ "1-Sim\n"
-						+ "2-Não\n");
+						+ "0-Sim\n"
+						+ "1-Não\n");
 				acao = ler.nextInt();
 				
-				if(acao == 1) {
+				if(acao == 0) {
 					acao = 0;
 					//para alterar o nome
 					System.out.println("Deseja alterar o nome do produto?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual nome deseja colocar?");
-						alterar = ler.next();
+						ler.nextLine();
+						alterar = ler.nextLine();
 						buscaProduto.setProduto(alterar);
 						acao = 0;
 						alterar = null;
 					}
 					//para alterar a descrição
 					System.out.println("Deseja alterar a descrição do produto?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual descrição deseja colocar?");
-						alterar = ler.next();
+						ler.nextLine();
+						alterar = ler.nextLine();
 						buscaProduto.setDescricao(alterar);
 						acao = 0;
 						alterar = null;
 					}
 					//para alterar o valor
 					System.out.println("Deseja alterar o valor do produto?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual valor deseja colocar?");
-						alterar = ler.next();
+						ler.nextLine();
+						alterar = ler.nextLine();
 						buscaProduto.setValor(alterar);
 						acao = 0;
 						alterar = null;
 					}
 					//para alterar o lucro
 					System.out.println("Deseja alterar a porcentagem de lucro do produto?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual porcentagem deseja colocar?");
-						alterar = ler.next();
+						ler.nextLine();
+						alterar = ler.nextLine();
 						buscaProduto.setLucro(alterar);
 						acao = 0;
 						alterar = null;
 					}
 					//para alterar o estoque
 					System.out.println("Deseja alterar a quantidade em estoque do produto?\n"
-							+ "1-Sim\n"
-							+ "2-Não\n");
+							+ "0-Sim\n"
+							+ "1-Não\n");
 					acao = ler.nextInt();
-					if(acao == 1) {
+					if(acao == 0) {
 						System.out.println("Qual quantidade deseja colocar?");
-						alterar = ler.next();
-						buscaProduto.setEstoque(alterar);
+						alterarEstoque = ler.nextInt();
+						buscaProduto.setEstoque(alterarEstoque);
 						acao = 0;
-						alterar = null;
 					}
 					System.out.println("Produto: " + buscaProduto.getProduto() + "\n"
 							+ "Descrição: " + buscaProduto.getDescricao() + "\n"
@@ -190,32 +198,36 @@ class Programa {
 			break;
 			
 		case 5:
-			System.out.println("ESCOLHA UM CLIENTE");
-			for(int i = 0; i < 10; i++) {
+			System.out.println("Escolha um cliente:");
+			for (int i=0; i < dadosCliente.dadosDoCliente.size(); i++) {
 				Cliente listaClientes = dadosCliente.listaDeCliente(i);
 				System.out.println(i+"-"+listaClientes.getNome());
 			}
-			acao = ler.nextInt();
-			acao = 0;
+			ler.nextInt();
+			
 			while(true) {
-				System.out.println("ESCOLHA UM PRODUTO OU ESCREVA -1 CASO NÃO QUEIRA MAIS CADASTRAR VENDAS");
-				for(int i = 0; i < 10; i++) {
+				System.out.println("Escolha um produto ou aperte -1 para sair:");
+				for(int i=0; i<dadosProduto.dadosDoProduto.size(); i++) {
 					Produto listaProdutos = dadosProduto.listaDeProdutos(i);
-					System.out.println(i+"-"+listaProdutos.getProduto()+", "+listaProdutos.getDescricao());
-				}	
+					System.out.println(i+"-"+listaProdutos.getProduto());
+				}
 				acao = ler.nextInt();
 				if(acao == -1) {
 					break;
 				}
-				acao = 0;
-				System.out.println("QUANTIDADE:");
+				for(int i=0; i<=acao; i++) {
+					Produto listaProdutos = dadosProduto.listaDeProdutos(i);
+					if(i==acao) {
+						aux = listaProdutos.getEstoque();
+				
+					}
+				}
+				System.out.println("Quantidade:");
 				qntdVendas = ler.nextInt();
 			}
-			System.out.println("Vendas cadastradas com sucesso!");
 			break;
-			
 		case 6:
-			System.out.println("Nome/Quantidade em estoque");
+			System.out.println("NOME/QUANTIDADE EM ESTOQUE");
 			for(int i = 0; i < 10; i++) {
 				Produto listaProdutos = dadosProduto.listaDeProdutos(i);
 				System.out.println(listaProdutos.getProduto()+"/"+listaProdutos.getEstoque());
