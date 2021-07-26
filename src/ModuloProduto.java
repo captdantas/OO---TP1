@@ -18,7 +18,7 @@ public class ModuloProduto {
 		dadosDoProduto.add(produto1);
 		
 		Produto produto2 = new Produto();
-		produto2.setProduto("LideranÁa");
+		produto2.setProduto("LideranÔøΩa");
 		produto2.setDescricao("por Daniel Goleman e Ivo Korytowski");
 		produto2.setValor("44.90");
 		produto2.setLucro("55");
@@ -34,15 +34,15 @@ public class ModuloProduto {
 		dadosDoProduto.add(produto3);
 		
 		Produto produto4 = new Produto();
-		produto4.setProduto("Legenda ·urea");
-		produto4.setDescricao("por Jacopo de Varazze e Hil·rio Franco J˙nior");
+		produto4.setProduto("Legenda ÔøΩurea");
+		produto4.setDescricao("por Jacopo de Varazze e HilÔøΩrio Franco JÔøΩnior");
 		produto4.setValor("117.90");
 		produto4.setLucro("45");
 		produto4.setEstoque(12);
 		dadosDoProduto.add(produto4);
 		
 		Produto produto5 = new Produto();
-		produto5.setProduto("O poder do h·bito");
+		produto5.setProduto("O poder do hÔøΩbito");
 		produto5.setDescricao("por Charles Duhigg e Rafael Mantovani");
 		produto5.setValor("69.90");
 		produto5.setLucro("60");
@@ -59,14 +59,14 @@ public class ModuloProduto {
 		
 		Produto produto7 = new Produto();
 		produto7.setProduto("Mulheres que correm com os lobos");
-		produto7.setDescricao("por Clarissa Pinkola EstÈs");
+		produto7.setDescricao("por Clarissa Pinkola EstÔøΩs");
 		produto7.setValor("69.90");
 		produto7.setLucro("30");
 		produto7.setEstoque(33);
 		dadosDoProduto.add(produto7);
 		
 		Produto produto8 = new Produto();
-		produto8.setProduto("O andar do bÍbado: Como o acaso determina nossas vidas");
+		produto8.setProduto("O andar do bÔøΩbado: Como o acaso determina nossas vidas");
 		produto8.setDescricao("por Leonard Mlodinow, Diego Alfaro, e outros.");
 		produto8.setValor("39.90");
 		produto8.setLucro("15");
@@ -74,7 +74,7 @@ public class ModuloProduto {
 		dadosDoProduto.add(produto8);
 		
 		Produto produto9 = new Produto();
-		produto9.setProduto("O homem mais rico da BabilÙnia");
+		produto9.setProduto("O homem mais rico da BabilÔøΩnia");
 		produto9.setDescricao("por George S Clason");
 		produto9.setValor("29.90");
 		produto9.setLucro("45");
@@ -96,10 +96,10 @@ public class ModuloProduto {
 		System.out.println("Nome do produto:");  
 	    novo.setProduto(ler.nextLine());  
 	    
-	    System.out.println("DescriÁao:");  
+	    System.out.println("DescriÔøΩao:");  
 	    novo.setDescricao(ler.nextLine());  
 	         
-	    System.out.println("PreÁo Unit·rio:");  
+	    System.out.println("PreÔøΩo UnitÔøΩrio:");  
 	    novo.setValor(ler.nextLine());
 	    
 	    System.out.println("Porcentagem de lucro:");  
@@ -120,11 +120,30 @@ public class ModuloProduto {
 				 return dadosDoProduto.get(i);
 			 }
 		}
-		System.out.println("Produto n„o encontrado!");
+		System.out.println("Produto nÔøΩo encontrado!");
 		return null;
 	}
 	
 	public Produto listaDeProdutos(int index) {
 		return dadosDoProduto.get(index);
 	}
+
+	public boolean venderProduto(int index, int quantidade) {
+		if (index > dadosDoProduto.size()) {
+			System.out.println("Produto n√£o encontrado");
+			return false;
+		}
+
+		Produto produto = dadosDoProduto.get(index);
+
+		if (produto.estoque < quantidade) {
+			System.out.println("Quantidade do produto indispon√≠vel. S√≥ √© poss√≠vel vender: " + produto.estoque + " unidades.");
+			return false;
+		}
+
+		dadosDoProduto.get(index).estoque = produto.estoque - quantidade;
+
+		return true;
+	}
+
 }

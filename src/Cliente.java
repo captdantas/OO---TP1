@@ -19,9 +19,4 @@ public class Cliente {
 	public void setTelefone(String telefoneAlterado) {
 		this.telefone = telefoneAlterado;
 	}
-
 }
-
-
-
-
